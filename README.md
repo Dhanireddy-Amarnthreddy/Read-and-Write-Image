@@ -23,29 +23,53 @@ End the program and close the output image windows.
 # Developed By:
 # Register Number
 # To Read,display the image
-
+import cv2
+colorImage = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/cars1.jpg',1)
+cv2.imshow('212221240012-ReadingAndDisplaying',colorImage)
+cv2.waitKey(0)
 
 
 
 # To write the image
-
+import cv2
+colorImage = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/cars1.jpg',1)
+cv2.imwrite('/Users/kodurusanathkumarreddy/Desktop/written.jpg',colorImage)
+written = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/written.jpg',1)
+cv2.imshow('212221240012-WrittenImage',written)
+cv2.waitKey(0)
+<br>
+<br>
 
 
 
 
 # Find the shape of the Image
-
+import cv2
+colorImage = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/cars1.jpg',1)
+print(colorImage.shape)
 
 
 
 # To access rows and columns
-
+import cv2
+import random
+colorImage = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/cars1.jpg',1)
+for i in range(100):
+    for j in range(colorImage.shape[1]):
+        colorImage[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+cv2.imshow('212221240012-AccessingRowsAndColumns',colorImage)
+cv2.waitKey(0)
 
 
 
 
 # To cut and paste portion of image
-
+import cv2
+colorImage = cv2.imread('/Users/kodurusanathkumarreddy/Desktop/cars1.jpg',1)
+tag = colorImage[20:80,20:80]
+colorImage[90:150,90:150] = tag
+cv2.imshow('212221240012-CutAndPaste',colorImage)
+cv2.waitKey(0)
 
 
 
@@ -60,24 +84,29 @@ End the program and close the output image windows.
 
 ### i) Read and display the image
 
+![]('ReadDisplay.png')
+
 <br>
 <br>
 
 ### ii)Write the image
+![]('WrittenImage.png')
 
-<br>
-<br>
 
 ### iii)Shape of the Image
+![]('Shape1.png')
+
 
 <br>
 <br>
 
 ### iv)Access rows and columns
+![]('Accessing.png')
 <br>
 <br>
 
 ### v)Cut and paste portion of image
+![]('cutPaste.png')
 <br>
 <br>
 
